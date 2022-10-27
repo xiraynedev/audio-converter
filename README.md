@@ -11,7 +11,7 @@ This project recursively retrieves audio files from the specified source directo
 
 1. Clone the repo:
 ```sh
-https://github.com/xiraynedev/audio-converter.git
+git clone https://github.com/xiraynedev/audio-converter.git
 ```
 
 2. Change directory:
