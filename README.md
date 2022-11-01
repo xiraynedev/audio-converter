@@ -3,9 +3,9 @@
 
 # audio-converter
 
-This project recursively retrieves audio files from the specified source directory and converts them between different formats.
+This project recursively retrieves audio files from the specified source directory and converts them between different formats. [FFmpeg](https://ffmpeg.org/) was used to convert the files.
 
-![](assets/images/project-screenshot.webp)
+![project screenshot](assets/images/project-screenshot.webp)
 
 ## Installation Instructions
 
@@ -19,4 +19,4 @@ git clone https://github.com/xiraynedev/audio-converter.git
 cd audio-converter
 ```
 
-3. Open the solution file in **Visual Studio 2022**.
+3. Open the solution file in **Visual Studio 2022**. Be sure to already have FFmpeg installed on your system at the location `C:\Tools\ffmpeg\bin\ffmpeg.exe`.
