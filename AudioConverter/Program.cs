@@ -7,6 +7,7 @@ namespace AudioConverter
         private static string _baseDirectory = string.Empty;
         private static string _sourceExtension = string.Empty;
         private static string _destinationExtension = string.Empty;
+        private static string _destination = string.Empty;
         private static void ConvertFile(FileInfo file)
         {
             int timeout = 10000;
@@ -14,9 +15,9 @@ namespace AudioConverter
 
             Directory.CreateDirectory($@"{file.Directory}\Converted");
 
-            string destination = $@"C:\Music\Converted\{file.Name.Replace(_sourceExtension, _destinationExtension)}";
+            _destination = $@"C:\Music\Converted\{file.Name.Replace(_sourceExtension, _destinationExtension)}";
 
-            if (File.Exists(destination))
+            if (File.Exists(_destination))
             {
                 DisplayMessage($"Unprocessed: {file.FullName}");
                 return;
@@ -29,7 +30,7 @@ namespace AudioConverter
                 StartInfo =
                 {
                     FileName = @"C:\Tools\ffmpeg\bin\ffmpeg.exe",
-                    Arguments = $"-i {source} {destination}",
+                    Arguments = $"-i {source} {_destination}",
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
@@ -85,7 +86,7 @@ namespace AudioConverter
 
             ProcessFolder(new DirectoryInfo(_baseDirectory));
 
-            DisplayMessage("Conversion complete. The converted files are located in the Converted directory in the source directory that was provided.");
+            DisplayMessage($@"Conversion complete. The converted files are located in {_baseDirectory}\Converted.");
             DisplayMessage("");
         }
     }
