@@ -3,9 +3,9 @@
 
 # audio-converter
 
-This project recursively retrieves audio files from the specified source directory and converts them between different formats. [FFmpeg](https://ffmpeg.org/) was used to convert the files.
+This application recursively retrieves audio files from the specified source directory and converts them between different formats. [FFmpeg](https://ffmpeg.org/) was used to convert the files.
 
-![project screenshot](assets/images/project-screenshot.webp)
+![application screenshot](assets/images/application-screenshot.webp)
 
 ## Installation Instructions
 
